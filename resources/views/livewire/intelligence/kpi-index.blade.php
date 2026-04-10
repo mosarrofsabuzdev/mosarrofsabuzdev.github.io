@@ -1,0 +1,1 @@
+<div class="space-y-4"><h1 class="text-2xl font-semibold">KPI Dashboard</h1><div class="grid md:grid-cols-3 gap-4"><x-metric-tile label="Total Clients" :value="$totalClients" /><x-metric-tile label="Active Projects" :value="$activeProjects" /><x-metric-tile label="Team Utilization" value="{{ $utilization }}%" /></div></div>

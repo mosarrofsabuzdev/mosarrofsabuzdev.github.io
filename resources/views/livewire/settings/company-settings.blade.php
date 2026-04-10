@@ -1,0 +1,1 @@
+<div class="space-y-4"><h1 class="text-2xl font-semibold">Company Settings</h1><x-card><p class="text-sm text-slate-500">Company profile, invoice defaults, timezone, and currency setup UI.</p></x-card></div>

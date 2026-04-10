@@ -1,0 +1,1 @@
+<div class="space-y-4"><h1 class="text-2xl font-semibold">Team Utilization</h1><x-card><ul class="divide-y">@foreach($users as $user)<li class="py-2 text-sm">{{ $user->name }} - {{ $user->tasks_count }} assigned tasks</li>@endforeach</ul></x-card></div>

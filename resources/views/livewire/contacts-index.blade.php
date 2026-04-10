@@ -1,0 +1,1 @@
+<div><h1 class="text-2xl font-semibold mb-4">Contacts</h1><x-card><ul class="divide-y">@forelse($contacts as $contact)<li class="py-2 text-sm">{{ $contact->name }} — {{ $contact->email }}</li>@empty<li><x-empty-state title="No contacts" /></li>@endforelse</ul></x-card></div>

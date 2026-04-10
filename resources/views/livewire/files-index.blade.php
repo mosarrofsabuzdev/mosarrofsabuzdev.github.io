@@ -1,0 +1,1 @@
+<div class="space-y-4"><h1 class="text-2xl font-semibold">Files & Approvals</h1><x-card><ul class="divide-y">@forelse($files as $file)<li class="py-2 text-sm">{{ $file->name }} <x-status-pill :status="$file->approval_status" /></li>@empty<li><x-empty-state title="No files uploaded" /></li>@endforelse</ul></x-card></div>

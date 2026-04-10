@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply font-sans text-sm bg-slate-50;
+    }
+}
+
+@layer components {
+    .upnez-page {
+        @apply animate-in fade-in duration-200;
+    }
+}
