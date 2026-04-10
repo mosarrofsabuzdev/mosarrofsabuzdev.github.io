@@ -1,0 +1,1 @@
+<div class="space-y-4"><h1 class="text-2xl font-semibold">Email Settings</h1><x-card><p class="text-sm text-slate-500">Configure SMTP and manage email templates for invoice and follow-up emails.</p><p class="mt-2 text-xs text-slate-400">Templates loaded: {{ $templates->count() }}</p></x-card></div>

@@ -1,0 +1,1 @@
+<div class="space-y-4"><h1 class="text-2xl font-semibold">Integrations</h1><x-card><ul class="list-disc pl-5 text-sm text-slate-600"><li>Stripe (future)</li><li>Slack (future)</li><li>Zapier (future)</li></ul></x-card></div>

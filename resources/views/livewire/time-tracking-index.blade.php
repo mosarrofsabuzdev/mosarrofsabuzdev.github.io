@@ -1,0 +1,1 @@
+<div class="space-y-4"><h1 class="text-2xl font-semibold">Time Tracking</h1><x-metric-tile label="Billable Hours" value="{{ number_format($total,2) }}h" /><x-card><p class="text-sm text-slate-500">Timer widget placeholder with Alpine.js start/stop logic.</p></x-card></div>

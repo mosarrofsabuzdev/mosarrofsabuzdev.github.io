@@ -1,0 +1,1 @@
+<div class="space-y-4"><h1 class="text-2xl font-semibold">Cashflow Forecast</h1><div class="grid md:grid-cols-2 gap-4"><x-metric-tile label="Projected Income (90d)" value="$ {{ number_format($income,2) }}" /><x-metric-tile label="Projected Outflow (90d)" value="$ {{ number_format($outflow,2) }}" /></div></div>

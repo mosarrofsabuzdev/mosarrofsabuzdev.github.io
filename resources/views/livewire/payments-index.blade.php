@@ -1,0 +1,1 @@
+<div class="space-y-4"><h1 class="text-2xl font-semibold">Payments</h1><x-card><ul class="divide-y">@foreach($payments as $payment)<li class="py-2 text-sm">${{ number_format($payment->amount,2) }} via {{ $payment->method }} ({{ $payment->date?->format('M d, Y') }})</li>@endforeach</ul></x-card>{{ $payments->links() }}</div>

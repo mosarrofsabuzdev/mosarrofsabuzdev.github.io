@@ -1,0 +1,1 @@
+<div class="space-y-4"><h1 class="text-2xl font-semibold">P&L Tracker</h1><div class="grid md:grid-cols-3 gap-4"><x-metric-tile label="Revenue" value="$ {{ number_format($revenue,2) }}" /><x-metric-tile label="Expenses" value="$ {{ number_format($expenses,2) }}" /><x-metric-tile label="Profit" value="$ {{ number_format($revenue-$expenses,2) }}" /></div></div>

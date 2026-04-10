@@ -1,0 +1,1 @@
+<div class="space-y-4"><h1 class="text-2xl font-semibold">Expenses</h1><x-card><ul class="divide-y">@foreach($expenses as $expense)<li class="py-2 text-sm">{{ $expense->category }} - ${{ number_format($expense->amount,2) }} @if(!$expense->approved)<span class="text-amber-600">(Pending approval)</span>@endif</li>@endforeach</ul></x-card>{{ $expenses->links() }}</div>
