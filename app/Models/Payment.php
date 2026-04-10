@@ -10,7 +10,7 @@ class Payment extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['invoice_id','amount','date','method','reference','notes'];
+    protected $fillable = ['invoice_id', 'amount', 'date', 'method', 'reference', 'notes'];
 
     protected function casts(): array
     {
@@ -21,14 +21,22 @@ class Payment extends Model
     {
         static::created(function (self $payment): void {
             $invoice = $payment->invoice;
-            if ($invoice) {
-                $invoice->update(['status' => 'paid']);
-                if ($invoice->client?->accountManager) {
-                    $invoice->client->accountManager->notify(new PaymentReceivedNotification($payment));
-                }
+
+            if (! $invoice) {
+                return;
+            }
+
+            $paidAmount = $invoice->payments()->sum('amount');
+            $invoice->update(['status' => $paidAmount >= $invoice->total ? 'paid' : 'sent']);
+
+            if ($invoice->client?->accountManager) {
+                $invoice->client->accountManager->notify(new PaymentReceivedNotification($payment));
             }
         });
     }
 
-    public function invoice() { return $this->belongsTo(Invoice::class); }
+    public function invoice()
+    {
+        return $this->belongsTo(Invoice::class);
+    }
 }

@@ -9,9 +9,7 @@ class InvoiceOverdueNotification extends Notification
 {
     use Queueable;
 
-    public function __construct(public mixed $payload = null)
-    {
-    }
+    public function __construct(public mixed $payload = null) {}
 
     public function via(object $notifiable): array
     {
@@ -23,7 +21,7 @@ class InvoiceOverdueNotification extends Notification
         return [
             'type' => 'InvoiceOverdue',
             'title' => 'InvoiceOverdue Notification',
-            'message' => 'A InvoiceOverdue event was triggered in UPNEZ Agency OS.',
+            'message' => 'An InvoiceOverdue event was triggered in UPNEZ Agency OS.',
             'data' => $this->payload,
             'action_url' => '/dashboard',
         ];

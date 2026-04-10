@@ -9,9 +9,7 @@ class EmailSentConfirmationNotification extends Notification
 {
     use Queueable;
 
-    public function __construct(public mixed $payload = null)
-    {
-    }
+    public function __construct(public mixed $payload = null) {}
 
     public function via(object $notifiable): array
     {
@@ -23,7 +21,7 @@ class EmailSentConfirmationNotification extends Notification
         return [
             'type' => 'EmailSentConfirmation',
             'title' => 'EmailSentConfirmation Notification',
-            'message' => 'A EmailSentConfirmation event was triggered in UPNEZ Agency OS.',
+            'message' => 'An EmailSentConfirmation event was triggered in UPNEZ Agency OS.',
             'data' => $this->payload,
             'action_url' => '/dashboard',
         ];

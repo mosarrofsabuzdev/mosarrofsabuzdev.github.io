@@ -16,7 +16,7 @@ return new class extends Migration
             $table->longText('body')->nullable();
             $table->timestamp('sent_at')->nullable();
             $table->foreignId('sent_by')->nullable()->constrained('users')->nullOnDelete();
-            $table->morphs('emailable');
+            $table->nullableMorphs('emailable');
             $table->timestamps();
         });
     }
